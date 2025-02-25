@@ -1,0 +1,547 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=2.0, maximum-scale=2.0">
+  <link rel="icon" type="image/png" href="images/LogoEquipe.png">
+  <link rel="manifest" href="/manifest.json">
+  <link rel="stylesheet" href="styles.css">
+  <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&display=swap" rel="stylesheet">
+  <script src="https://cdn.jsdelivr.net/gh/davidshimjs/qrcodejs/qrcode.min.js"></script>
+  <script src="script.js" defer></script>
+  <title>RD Scouting</title>
+</head>
+<body>
+  <div id="page1" class="content active">
+    <div id="RD"><img src="images/RDScout.png" alt="RD Scouting"></div>
+    <div class="H1AllPages">INFORMATIONS</div>
+    <div class="OrganizationPage1">
+      <div class="OrganizationInputsPage1">
+        <div class="AreaInputPage1">
+          <div class="InputsPage1">
+            <div class="H2InputsPage1">SCOUTER</div>
+            <input name="Scouter" id="txtScouter" class="TxtAreaPage1" rows="2" cols="50" placeholder="Nome do Scouter..." oninput="validateScouter(this)">
+          </div>
+        <div class="AreaInputPage1">
+          <div class="InputsPage1">
+            <div class="H2InputsPage1">NÚMERO DA PARTIDA</div>
+            <input type="number" name="Match" id="txtMatch" class="TxtAreaPage1" rows="2" cols="50" placeholder="Número da partida..." min="1" max="100" oninput="validateMatch(this)">
+          </div>
+        </div>
+        <div class="AreaInputPage1">
+          <div class="InputsPage1">
+            <div class="H2InputsPage1">NÚMERO DO TIME</div>
+           <!-- <input type="number" name="Team" id="Team" class="TxtAreaPage1" rows="2" cols="50" placeholder="Número da equipe..." min="1" max="10714" oninput="validateTeam(this)">-->
+             <input list="opcoes" id="Team" name="Team" class="TeamSelectAreaPage1" placeholder="Número da equipe..." autocomplete="off">
+             <datalist id="opcoes">
+              <option value="1156">1156 (Under Control)</option>
+              <option value="1772">1772 (The Brazilian Trail Blazers)</option>
+              <option value="1860">1860 (Alphabots)</option>
+              <option value="6404">6404 (Brazilian Storm)</option>
+              <option value="7033">7033 (Manna Roosters)</option>
+              <option value="7459">7459 (Taubatexas Robotics)</option>
+              <option value="7563">7563 (SESI SENAI MEGAZORD)</option>
+              <option value="7565">7565 (SESI SENAI ROBONÁTICOS)</option>
+              <option value="7567">7567 (SESI SENAI OCTOPUS)</option>
+              <option value="8276">8276 (ETECHNOLOGY)</option>
+              <option value="8882">8882 (Infinity BR)</option>
+              <option value="9085">9085 (SESI SENAI MEGA HARPY)</option>
+              <option value="9110">9110 (SESI SENAI Atomiic)</option>
+              <option value="9162">9162 (ALL MIGHT)</option>
+              <option value="9163">9163 (HYDRA)</option>
+              <option value="9164">9164 (Tech Vikings)</option>
+              <option value="9168">9168 (AGROBOT)</option>
+              <option value="9169">9169 (AGROTECH)</option>
+              <option value="9175">9175 (BrainMachine-FRC)</option>
+              <option value="9199">9199 (SESI SENAI SHARKS)</option>
+              <option value="9200">9200 (SESI SENAI STARDUST)</option>
+              <option value="9219">9219 (Nine Tails)</option>
+              <option value="9458">9458 (SESI SENAI JACTECH)</option>
+              <option value="9459">9459 (SESI SENAI RPRT HAWKS)/option>
+              <option value="9460">9460 (SESI SENAI STEEL BULLS)</option>
+              <option value="9461">9461 (SESI SENAI MecaChronos)</option>
+              <option value="9484">9484 (Robot's District)</option>
+              <option value="9602">9602 (CANINTECH)</option>
+              <option value="10263">10263 (Temari Robotics)</option>
+              <option value="10291">10291 (MUTUM-X)</option>
+              <option value="10295">10295 (FOREST GUARDIANS)</option>
+              <option value="10296">10296 (BIOBOTS)</option>
+              <option value="10297">10297 (PANTANALBOTS)</option>
+              <option value="10298">10298 (LUVER CONTROL)</option>
+              <option value="10299">10299 (HARVBOT)</option>
+              <option value="10483">10483 (Andes Robotics)</option>
+            </datalist>
+          </div>
+        </div>
+      </div>
+    </div>
+      <div class="OrganizationBtnPage1">
+        <div class="AreaMatchType">
+         <div class="H2AreaBtnPage1">TIPO DE PARTIDA</div>
+          <div class="AreaBtnMatchtype">
+            <div class="StyleBtnMatchType" id="btnPractice" onclick="selectOptionMT('Practice')">
+              <img src="images/Practiceimg.png" alt="Practices">
+            </div>
+            <div class="StyleBtnMatchType" id="btnQualifications" onclick="selectOptionMT('Qualifications')">
+              <img src="images/Qualificationsimg.png" alt="Qualifications">
+            </div>
+            <div class="StyleBtnMatchType" id="btnPlayoffs" onclick="selectOptionMT('Playoffs')">
+              <img src="images/Playoffsimg.png" alt="Playoffs">
+            </div>
+            <div class="StyleBtnMatchType" id="btnFinals" onclick="selectOptionMT('Finals')">
+              <img src="images/Finalsimg.png" alt="Finals">
+            </div>
+          </div>
+        </div>
+        <div class="AreaAlliance">
+          <div class="H2AreaBtnPage1">ALIANÇA</div>
+          <div class="AreaBtnAlliance">
+            <div class="StyleBtnAlliance" id="btnBlue" onclick="selectOptionColor('Blue')">⠀</div>
+            <div class="StyleBtnAlliance"><img src="images/vscolor.png" alt="Versus"></div>
+            <div class="StyleBtnAlliance" id="btnRed" onclick="selectOptionColor('Red')">⠀</div>
+          </div>
+        </div>
+
+        <div class="AreaTeamPosition">
+          <div class="H2AreaBtnPage1">POSIÇÃO INICIAL</div>
+          <div class="AreaBtnTeamPosition">
+            <div class="StyleBtnTeamPosition" id="btnLeft" onclick="selectOptionPosition('Left')">
+              <img src="images/Leftimg.png" alt="Left">
+            </div>
+            <div class="StyleBtnTeamPosition" id="btnMiddle" onclick="selectOptionPosition('Middle')">
+              <img src="images/Middleimg.png" alt="Middle">
+            </div>
+            <div class="StyleBtnTeamPosition" id="btnRight" onclick="selectOptionPosition('Right')">
+              <img src="images/Rightimg.png" alt="Right">
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="PageNavStyle">
+      <div class="nextPage"><button id="nextBtn1" onclick="validatePage1()" class="nextpagebtn">NEXT</button></div>
+    </div>
+  </div>
+  <div id="page2" class="content">
+    <div class="H1AllPages">AUTONOMOUS</div>
+    <div class="OrganizationBtn1Page2">
+    <div class="AreaZonaInicial">
+    <div class="H2N1Page2">DEIXOU A ZONA INICIAL?</div> 
+    <div class="AreaBtnZonaInicial">
+      <div class="StyleBtnZonaInicial" id="btnZonaInicial" onclick="selectZonaInicial('ZonaInicial')">
+        <img src="images/Checkimg.png" alt="Check">
+      </div>
+    </div>
+  </div>
+  <div class="AreaCoralStation">
+    <div class="H2N2Page2">PEGOU DA CORAL STATION?</div> 
+    <div class="AreaBtnCoralStation">
+      <div class="StyleBtnCoralStation" id="btnCoralStation" onclick="selectCoralStation('CoralStation')">
+        <img src="images/Checkimg.png" alt="Check">
+      </div>
+    </div>
+  </div>
+  </div>
+    <div class="OrganizationPaiPage2">
+      <div class="OrganizationReef">
+      <div class="Organizationl1l2">
+      <div class="AreaPaiBtn">
+        <div class="Areaborda1btnpage2">
+          <div class="Areaeespaçobtn"><div class="espaçobtn"></div></div>
+          <h3 class="H3blocobtn">L1 AUTO</h3>
+          <div class="OrganizationDisplay"><div class="AreaDisplay" id="numDisplayReefacertadoAuto">0</div></div>
+          <p></p>
+          <div class="Areabtnstyle">
+            <button onclick="aumentarnumReefacertadoAuto()" class="btnestilizados">+</button>
+            <button onclick="diminuirnumReefacertadoAuto()" class="btnestilizados">-</button>
+          </div>
+        </div>
+      </div>
+
+      <div class="AreaPaiBtn">
+        <div class="Areaborda1btnpage2">
+          <div class="Areaeespaçobtn"><div class="espaçobtn"></div></div>
+          <h3 class="H3blocobtn">L2 AUTO</h3>
+          <div class="OrganizationDisplay"><div class="AreaDisplay" id="numDisplayReefL2acertadoAuto">0</div></div>
+          <p></p>
+          <div class="Areabtnstyle">
+            <button onclick="aumentarnumReefL2acertadoAuto()" class="btnestilizados">+</button>
+            <button onclick="diminuirnumReefL2acertadoAuto()" class="btnestilizados">-</button>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="Organizationl3l4">
+      <div class="AreaPaiBtn">
+        <div class="Areaborda1btnpage2">
+          <div class="Areaeespaçobtn"><div class="espaçobtn"></div></div>
+          <h3 class="H3blocobtn">L3 AUTO</h3>
+          <div class="OrganizationDisplay"><div class="AreaDisplay" id="numDisplayReefL3acertadoAuto">0</div></div>
+          <p></p>
+          <div class="Areabtnstyle">
+            <button onclick="aumentarnumReefL3acertadoAuto()" class="btnestilizados">+</button>
+            <button onclick="diminuirnumReefL3acertadoAuto()" class="btnestilizados">-</button>
+          </div>
+        </div>
+      </div>
+
+      <div class="AreaPaiBtn">
+        <div class="Areaborda1btnpage2">
+          <div class="Areaeespaçobtn"><div class="espaçobtn"></div></div>
+          <h3 class="H3blocobtn">L4 AUTO</h3>
+          <div class="OrganizationDisplay"><div class="AreaDisplay" id="numDisplayReefL4acertadoAuto">0</div></div>
+          <p></p>
+          <div class="Areabtnstyle">
+            <button onclick="aumentarnumReefL4acertadoAuto()" class="btnestilizados">+</button>
+            <button onclick="diminuirnumReefL4acertadoAuto()" class="btnestilizados">-</button>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="OrganizationAlga">
+    <div class="AreaPaiBtn">
+      <div class="Areaborda2btnpage2">
+        <div class="Areaeespaçobtn"><div class="espaçobtn"></div></div>
+        <h3 class="H3blocobtn">PROCES AUTO</h3>
+        <div class="OrganizationDisplay"><div class="AreaDisplayCinza" id="numDisplayProcessoracertadoAuto">0</div></div>
+        <p></p>
+        <div class="Areabtnstyle">
+          <button onclick="aumentarnumProcessoracertadoAuto()" class="btnestilizados">+</button>
+          <button onclick="diminuirnumProcessoracertadoAuto()" class="btnestilizados">-</button>
+        </div>
+      </div>
+    </div>
+    <div class="AreaPaiBtn">
+      <div class="Areaborda2btnpage2">
+        <div class="Areaeespaçobtn"><div class="espaçobtn"></div></div>
+        <h3 class="H3blocobtn">NET AUTO</h3>
+        <div class="OrganizationDisplay"><div class="AreaDisplayCinza" id="numDisplayNetacertadoAuto">0</div></div>
+        <p></p>
+        <div class="Areabtnstyle">
+          <button onclick="aumentarnumNetacertadoAuto()" class="btnestilizados">+</button>
+          <button onclick="diminuirnumNetacertadoAuto()" class="btnestilizados">-</button>  
+        </div>
+      </div>
+    </div>
+  </div>
+  </div>
+
+  <div class="PageNavStyle2">
+    <div class="PreviousPage"><button id="prevBtn2" onclick="previousPage('page2')" class="previuospagebtn">PREVIOUS</button></div> 
+    <div class="nextPage"><button id="nextBtn2" onclick="nextPage('page2')" class="nextpagebtn">NEXT</button></div>
+    </div>
+  </div>
+<div id="page3" class="content">
+  <div class="H1AllPages">TELEOP</div>
+  <div class="OrganizationBtn1Page2">
+  <div class="AreaTiraAlga">
+    <div class="H2N1Page2">TIRA ALGA DO REEF?</div> 
+    <div class="AreaBtnTiraAlga">
+      <div class="StyleBtnTiraAlga" id="btnTiraAlga" onclick="selectTiraAlga('TiraAlga')">
+        <img src="images/Checkimg.png" alt="Left">
+      </div>
+    </div>
+  </div>
+  </div>
+  <div class="OrganizationPaiPage2">
+    <div class="OrganizationReef">
+    <div class="Organizationl1l2">
+    <div class="AreaPaiBtn">
+      <div class="Areaborda1btnpage2">
+        <div class="Areaeespaçobtn"><div class="espaçobtn"></div></div>
+        <h3 class="H3blocobtn">L1 TELEOP</h3>
+        <div class="OrganizationDisplay"><div class="AreaDisplay" id="numDisplayReefacertadoTeleop">0</div></div>
+        <p></p>
+        <div class="Areabtnstyle">
+          <button onclick="aumentarnumReefacertadoTeleop()" class="btnestilizados">+</button>
+          <button onclick="diminuirnumReefacertadoTeleop()" class="btnestilizados">-</button>
+        </div>
+      </div>
+    </div>
+
+    <div class="AreaPaiBtn">
+      <div class="Areaborda1btnpage2">
+        <div class="Areaeespaçobtn"><div class="espaçobtn"></div></div>
+        <h3 class="H3blocobtn">L2 TELEOP</h3>
+        <div class="OrganizationDisplay"><div class="AreaDisplay" id="numDisplayReefL2acertadoTeleop">0</div></div>
+        <p></p>
+        <div class="Areabtnstyle">
+          <button onclick="aumentarnumReefL2acertadoTeleop()" class="btnestilizados">+</button>
+          <button onclick="diminuirnumReefL2acertadoTeleop()" class="btnestilizados">-</button>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="Organizationl3l4">
+    <div class="AreaPaiBtn">
+      <div class="Areaborda1btnpage2">
+        <div class="Areaeespaçobtn"><div class="espaçobtn"></div></div>
+        <h3 class="H3blocobtn">L3 TELEOP</h3>
+        <div class="OrganizationDisplay"><div class="AreaDisplay" id="numDisplayReefL3acertadoTeleop">0</div></div>
+        <p></p>
+        <div class="Areabtnstyle">
+          <button onclick="aumentarnumReefL3acertadoTeleop()" class="btnestilizados">+</button>
+          <button onclick="diminuirnumReefL3acertadoTeleop()" class="btnestilizados">-</button>
+        </div>
+      </div>
+    </div>
+
+    <div class="AreaPaiBtn">
+      <div class="Areaborda1btnpage2">
+        <div class="Areaeespaçobtn"><div class="espaçobtn"></div></div>
+        <h3 class="H3blocobtn">L4 TELEOP</h3>
+        <div class="OrganizationDisplay"><div class="AreaDisplay" id="numDisplayReefL4acertadoTeleop">0</div></div>
+        <p></p>
+        <div class="Areabtnstyle">
+          <button onclick="aumentarnumReefL4acertadoTeleop()" class="btnestilizados">+</button>
+          <button onclick="diminuirnumReefL4acertadoTeleop()" class="btnestilizados">-</button>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<div class="OrganizationAlga">
+  <div class="AreaPaiBtn">
+    <div class="Areaborda2btnpage2">
+      <div class="Areaeespaçobtn"><div class="espaçobtn"></div></div>
+      <h3 class="H3blocobtn">PROCES TELEOP</h3>
+      <div class="OrganizationDisplay"><div class="AreaDisplayCinza" id="numDisplayProcessoracertadoTeleop">0</div></div>
+      <p></p>
+      <div class="Areabtnstyle">
+        <button onclick="aumentarnumProcessoracertadoTeleop()" class="btnestilizados">+</button>
+        <button onclick="diminuirnumProcessoracertadoTeleop()" class="btnestilizados">-</button>
+      </div>
+    </div>
+  </div>
+  <div class="AreaPaiBtn">
+    <div class="Areaborda2btnpage2">
+      <div class="Areaeespaçobtn"><div class="espaçobtn"></div></div>
+      <h3 class="H3blocobtn">NET TELEOP</h3>
+      <div class="OrganizationDisplay"><div class="AreaDisplayCinza" id="numDisplayNetacertadoTeleop">0</div></div>
+      <p></p>
+      <div class="Areabtnstyle">
+        <button onclick="aumentarnumNetacertadoTeleop()" class="btnestilizados">+</button>
+        <button onclick="diminuirnumNetacertadoTeleop()" class="btnestilizados">-</button>  
+      </div>
+    </div>
+  </div>
+</div>
+</div> 
+  
+  <div class="PageNavStyle3">
+    <div class="PreviousPage"><button id="prevBtn3" onclick="previousPage('page3')" class="previuospagebtn">PREVIOUS</button></div> 
+    <div class="nextPage"><button id="nextBtn3" onclick="nextPage('page3')" class="nextpagebtn">NEXT</button></div>
+    </div>
+</div>
+<div id="page4" class="content">
+  <div class="H1AllPages">END GAME</div>
+   <div class="AreaFinalPosition">
+    <div class="H2AreaBtnPage1">POSIÇÃO FINAL</div>
+    <div class="AreaBtnFinalPosition">
+      <div class="StyleBtnFinalPosition" id="btnClimbDeep" onclick="selectFinalPosition('ClimbDeep')">
+        <img src="images/Deep.png" alt="Deep">
+      </div>
+      <div class="StyleBtnFinalPosition" id="btnClimbDeepFalho" onclick="selectFinalPosition('ClimbDeepFalho')">
+        <img src="images/DeepFalho.png" alt="DeepFalho">
+      </div>
+      <div class="StyleBtnFinalPosition" id="btnClimbShallow" onclick="selectFinalPosition('ClimbShallow')">
+        <img src="images/Shalow.png" alt="Shalow">
+      </div>
+      <div class="StyleBtnFinalPosition" id="btnClimbShallowFalho" onclick="selectFinalPosition('ClimbShallowFalho')">
+        <img src="images/ShalowFalho.png" alt="ShalowFalho">
+      </div>
+      <div class="StyleBtnFinalPosition" id="btnParked" onclick="selectFinalPosition('Parked')">
+        <img src="images/Parked.png" alt="Parked">
+      </div>
+      <div class="StyleBtnFinalPosition" id="btnNenhum" onclick="selectFinalPosition('Nenhum')">
+        <img src="images/Nenhum.png" alt="Nenhum">
+      </div>
+    </div>
+    <div class="OrganizationBtn1Page4">
+      <div class="AreaCoopertition">
+      <div class="H2N1Page2">TEVE COOPERTITION?</div> 
+      <div class="AreaBtnCoopertition">
+        <div class="StyleBtnCoopertition" id="btnCoopertition" onclick="selectCoopertition('Coopertition')">
+          <img src="images/Checkimg.png" alt="Check">
+        </div>
+      </div>
+    </div>
+    <div class="AreaDefesa">
+      <div class="H2N2Page2">ROBÔ FAZ DEFESA?</div> 
+      <div class="AreaBtnDefesa">
+        <div class="StyleBtnDefesa" id="btnDefesa" onclick="selectDefesa('Defesa')">
+          <img src="images/Checkimg.png" alt="Check">
+        </div>
+      </div>
+    </div>
+ 
+    </div>
+    <div class="OrganizationBtn2Page4">
+      <div class="AreaRoboParou">
+        <div class="H2N2Page2">ROBÔ PAROU?</div> 
+        <div class="AreaBtnRoboParou">
+          <div class="StyleBtnRoboParou" id="btnRoboParou" onclick="selectRoboParou('RoboParou')">
+            <img src="images/Checkimg.png" alt="Check">
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="PageNavStyle4">
+    <div class="PreviousPage"><button id="prevBtn4" onclick="previousPage('page4')" class="previuospagebtn">PREVIOUS</button></div> 
+    <div class="nextPage"><button id="nextBtn4" onclick="validatePage4()" class="nextpagebtn">NEXT</button></div>
+    </div>
+</div>
+</div>
+<div id="page5" class="content">
+  <div class="H1AllPages">OFF MATCH</div>
+  <div class="OrganizationaH2RP">
+  <div class="H2N1Page2">RANKINGS POINTS</div> 
+  </div>
+  <div class="OrganizationBtn1Page5">
+    <div class="AreaAutoRP">
+    <div class="AreaBtnAutoRP">
+      <div class="StyleBtnAutoRP" id="btnAutoRP" onclick="selectAutoRP('AutoRP')">
+        <img src="images/autonomoimagerp.png" alt="AutoRP">
+      </div>
+    </div>
+  </div>
+  <div class="AreaCoralRP">
+    <div class="AreaBtnCoralRP">
+      <div class="StyleBtnCoralRP" id="btnCoralRP" onclick="selectCoralRP('CoralRP')">
+        <img src="images/coralimagerp.png" alt="CoralRP">
+      </div>
+    </div>
+  </div>
+  <div class="AreaBargeRP">
+    <div class="AreaBtnBargeRP">
+      <div class="StyleBtnBargeRP" id="btnBargeRP" onclick="selectBargeRP('BargeRP')">
+        <img src="images/bargeimagerp.png" alt="BargeRP">
+      </div>
+    </div>
+  </div>
+  </div>
+    <div class="AreaFaltas">
+    <div class="H2N1Page2">NÚMEROS DE FALTAS</div> 
+    <div class="AreaBtnFaltas">
+      <div class="AreaPaiBtn">
+        <div class="Areaborda1btnpage2">
+          <div class="Areaeespaçobtn"><div class="espaçobtn"></div></div>
+          <h3 class="H3blocobtn">FALTAS</h3>
+          <div class="OrganizationDisplay"><div class="AreaDisplay" id="numDisplayFaltas">0</div></div>
+          <p></p>
+          <div class="Areabtnstyle">
+            <button onclick="aumentarnumFaltas()" class="btnestilizados">+</button>
+            <button onclick="diminuirnumFaltas()" class="btnestilizados">-</button>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="AreaFalhasEObservações">
+    <div class="H2N2Page2">FALHAS E OBSERVAÇÕES</div> 
+    <div class="AreaBtnFalhasEObservações">
+      <input name="FalhasEObservações" id="txtFalhasEObservações" class="TxtAreaPage5" rows="2" cols="50" oninput="validateFalhas(this)" placeholder="Falhas e Observações...">
+    </div>
+  </div>
+  <div class="PageNavStyle5">
+    <div class="PreviousPage"><button id="prevBtn5" onclick="previousPage('page5')" class="previuospagebtn">PREVIOUS</button></div> 
+    <div class="nextPage"><button id="nextBtn5" onclick="nextPage('page5')" class="nextpagebtn">NEXT</button></div>
+    </div>
+</div>
+<div id="page6" class="content">
+  <div class="H1AllPages">DATA</div>
+  <div class="OrganizationBtn1Page6">
+    <div class="AreaString">
+      <div class="H2N1Page2">STRING COM OS DADOS</div> 
+      <div class="AreaBtnString">
+        <button id="BtnString" onclick="copiarParaAreaDeTransferencia()">
+          <img src="images/Stringimg.png" alt="CopiarString">
+      </button>
+      </div>
+    </div>
+    <div class="AreaDownloadReset">
+      <div class="H2N1Page2">BAIXAR E LIMPAR DADOS</div> 
+      <div class="AreaBtnDownloadReset">
+        <button class="BtnDownloadReset" onclick="downloadreset()">
+          <img src="images/DownloadResetimg.png" alt="Download And Reset">
+      </button>
+      </div>
+    </div>
+    </div>
+  <div class="OrganizationBtn2Page6">
+    <div class="AreaDownload">
+      <div class="H2N2Page2">BAIXAR DADOS</div> 
+      <div class="AreaBtnDownload">
+        <button class="BtnDownload" onclick="salvarCSV()">
+          <img src="images/Downloadimg.png" alt="Download">
+      </button>
+      </div>
+    </div>
+  </div>
+<div class="OrganizationQRCode">
+  <div class="H2N1Page2">GERADOR DE QR CODE</div> 
+<div class="AreaQRCode">
+<div class="AreaPaiQRCode">
+  <div id="qrcode"></div>
+  <div>
+</div>
+</div>
+</div>
+<div class="OrganizationBtnQRCode">
+<button id="generateButton" class="btnqrcode" onclick="generateQRCode()">Gerar QR Code</button>
+</div>
+</div>
+<div>
+</div>
+<button id="install-button" style="display: none;">Instalar Aplicativo</button>
+<form  id="FormSheet" method="post" action="" name="contact-form" onsubmit="return confirmarEnvio()">
+    <input type="hidden" name="Scouter" id="campoScouter">
+    <input type="hidden" name="Regional" id="campoRegional">
+    <input type="hidden" name="Match" id="campoMatch">
+    <input type="hidden" name="Team" id="campoTeam">
+    <input type="hidden" name="MatchType" id="campoMatchType">
+    <input type="hidden" name="TeamColor" id="campoColorTeam">
+    <input type="hidden" name="TeamPosition" id="campoTeamPosition">
+    <input type="hidden" name="LeftStartingLine" id="campoStartingLine"> 
+    <input type="hidden" name="PegouDoSourcenoAutonomo" id="campoSourceAuto">
+    <input type="hidden" name="Reef's-L1-acertadosAutonomo" id="campoReefL1Certo">
+    <input type="hidden" name="Reef's-L2-acertadosAutonomo" id="campoReefL2Certo">
+    <input type="hidden" name="Reef's-L3-acertadosAutonomo" id="campoReefL3Certo">
+    <input type="hidden" name="Reef's-L4-acertadosAutonomo" id="campoReefL4Certo">
+    <input type="hidden" name="Processor'sAcertadosAutonomo" id="campoProcessorCerto">
+    <input type="hidden" name="NetsAcertadosAutonomo" id="campoNetAcertado">
+    <input type="hidden" name="TiraAlga" id="CampoTiraAlga">
+    <input type="hidden" name="Reef's-L1-acertadosTeleop" id="campoReefL1CertoTeleop">
+    <input type="hidden" name="Reef's-L2-acertadosTeleop" id="campoReefL2CertoTeleop">
+    <input type="hidden" name="Reef's-L3-acertadosTeleop" id="campoReefL3CertoTeleop">
+    <input type="hidden" name="Reef's-L4-acertadosTeleop" id="campoReefL4CertoTeleop">
+    <input type="hidden" name="Processor'sAcertadosTeleop" id="campoProcessorCertoTeleop">
+    <input type="hidden" name="NetsAcertadosTeleop" id="campoNetAcertadoTeleop">
+    <input type="hidden" name="PosiçãoFinal" id="campoPosiçãoFinal">
+    <input type="hidden" name="CoopertitionBonus" id="campoCoopertitionPoint">
+    <input type="hidden" name="FazDefesa" id="campoFazDefesa">
+    <input type="hidden" name="RoboParou" id="campoRoboParou">
+    <input type="hidden" name="Faltas" id="CampoFaltas">
+    <input type="hidden" name="FalhaseObservações" id="campoFalhaseObservações">
+    <input type="hidden" name="AutonomousRP" id="campoAutonomousRP">
+    <input type="hidden" name="CoralRP" id="campoCoralRP">
+    <input type="hidden" name="BargeRP" id="campoBargeRP">
+  
+    <div class="OrganizationBtnSheets">
+    <button class="BtnSheets" type="submit">
+      <div class="IconeBtnSheets">
+          <img src="https://cdn-icons-png.flaticon.com/512/724/724954.png" alt="Ícone Enviar">
+      </div>
+      ENVIAR PARA O SHEETS
+    </button>
+  </div>
+  </form>
+  <div class="PageNavStyle6">
+    <div class="PreviousPage"><button id="prevBtn5" onclick="previousPage('page6')" class="previuospagebtn">PREVIOUS</button></div> 
+  </div>
+  </div>
+</body>
+</html>

@@ -1,0 +1,836 @@
+body {
+  user-select: none;
+  background: linear-gradient(to right, black, #504949); }
+.content {
+  display: none;
+  padding: 20px;
+  min-height: 60vh;
+  opacity: 0;
+ transition: opacity 0.5s ease-in-out;}
+.content.active {
+  display: block;
+  opacity: 1;}
+#RD {
+  text-align: center;
+  color: #d8c799; 
+  font-family: 'Bebas Neue', sans-serif;}
+#RD img {
+  width: 180px;
+}
+.H1AllPages{
+  text-align: center;
+  color: white;
+  font-size: 35px;
+  font-family: 'Poppins', sans-serif;
+}
+.OrganizationPage1{
+  text-align: center;
+  justify-content: center;
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  gap: 10%;
+  padding-top: 20px;}
+.OrganizationInputsPage1{
+  display: grid;}
+.AreaInputPage1{
+  text-align: center;
+  justify-content: center;}
+.InputsPage1{
+  text-align: left;
+  padding: 40px;}
+.H2InputsPage1{
+  color: #d8c799;
+  font-size: 30px;
+  font-family: 'Bebas Neue', sans-serif;}
+.TxtAreaPage1{
+  background: #373131;
+  color: white;
+  width: 100%;
+  padding: 4%;
+  border: 3px solid #d8c799; 
+  font-size: 16px;}
+.TeamSelectAreaPage1{
+  background: #373131;
+  color: white;
+  width: 100%;
+  padding: 4%;
+  border: 3px solid #d8c799; 
+  font-size: 16px;}
+input[type="number"]::-webkit-inner-spin-button, input[type="number"]::-webkit-outer-spin-button {
+  -webkit-appearance: none;
+  margin: 0;}
+.OrganizationBtnPage1{
+  display: flex;
+  flex-direction: column;
+  gap: 20px;}
+.AreaMatchType{
+  text-align: center;}
+.H2AreaBtnPage1{ 
+  color: #a6a6a6;
+  font-size: 30px;
+  font-family: 'Bebas Neue', sans-serif;}
+.AreaBtnMatchtype{
+  text-align: center;
+  justify-content: center;
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  gap: 15px;
+  justify-content: center;}
+.StyleBtnMatchType{  
+  text-align: center;
+  justify-content: center;
+  width: 100px;
+  height: 100px;
+  background-color: #373131;
+  border: solid #a6a6a6;
+  border-radius: 10%;
+  cursor: pointer;
+  transition: all 0.3s ease;}
+.StyleBtnMatchType img {
+  width: 85%;
+  height: 93%;
+  object-fit: cover;}
+.StyleBtnMatchType.selected {
+  transform: scale(1.13);
+  box-shadow: 0 0 15px rgba(0, 0, 0, 0.5);}
+.StyleBtnMatchType.deselected {
+  opacity: 0.2 }
+.AreaAlliance{
+  text-align: center;}
+.AreaBtnAlliance{
+  display: flex;
+  flex-direction: row;
+  justify-content: center;}
+.StyleBtnAlliance{
+  text-align: center;
+  justify-content: center;
+  width: 110px;
+  height: 110px;
+  border-radius: 10%;
+  cursor: pointer;
+  transition: all 0.3s ease;}
+.StyleBtnAlliance img{
+  width: 90%;
+  height: 90%;
+  object-fit: cover;}
+.StyleBtnAlliance#btnRed{
+  background-color: red;}
+.StyleBtnAlliance#btnBlue{
+  background-color: blue;}
+.StyleBtnAlliance.selected{
+  transform: scale(1.25);
+  box-shadow: 0 0 15px rgba(0, 0, 0, 0.5);}
+.StyleBtnAlliance.deselected{
+  transform: scale(0.7);
+  opacity: 0.2;}
+.AreaTeamPosition{
+  text-align: center}
+.AreaBtnTeamPosition{
+  display: flex;
+  flex-direction: row;
+  gap: 15px;
+  justify-content: center;}
+.StyleBtnTeamPosition{
+  text-align: center;
+  justify-content: center;
+  width: 100px;
+  height: 100px;
+  background-color: #373131;
+  border: solid #a6a6a6;
+  border-radius: 10%;
+  cursor: pointer;
+  transition: all 0.3s ease;}
+.StyleBtnTeamPosition img{
+  width: 95%;
+  height: 95%;
+  object-fit: cover;}
+.StyleBtnTeamPosition.selected{
+  transform: scale(1.13);
+  box-shadow: 0 0 15px rgba(0, 0, 0, 0.5);}
+.StyleBtnTeamPosition.deselected{
+  opacity: 0.2 }
+.A0{
+  justify-content: center;
+  text-align: center;}
+.PageNavStyle{
+  justify-content: center;
+  text-align: center;
+  display: flex;
+  flex-direction: row;
+  flex: wrap;
+  padding-top: 20px;
+  gap: 20%;}
+.PageNavStyle2{
+  justify-content: center;
+  text-align: center;
+  display: flex;
+  flex-direction: row;
+  flex: wrap;
+  gap: 20%;
+  padding-top: 30px;}
+.PageNavStyle3{
+  justify-content: center;
+  text-align: center;
+  display: flex;
+  flex-direction: row;
+  flex: wrap;
+  gap: 20%;
+  padding-top: 30px;}
+.PageNavStyle4{
+  justify-content: center;
+  text-align: center;
+  display: flex;
+  flex-direction: row;
+  flex: wrap;
+  gap: 20%;
+  padding-top: 59px;}
+.PageNavStyle5{
+  justify-content: center;
+  text-align: center;
+  display: flex;
+  flex-direction: row;
+  flex: wrap;
+  gap: 20%;
+  padding-top: 35px;}
+.PageNavStyle6{
+  justify-content: center;
+  text-align: center;
+  display: flex;
+  flex-direction: row;
+  flex: wrap;
+  gap: 20%;
+  padding-top: 10px;}
+.nextpagebtn{
+  background: transparent;
+  border: none;
+  color: white;
+  font-size: 20px;
+  cursor: pointer;}
+.nextpagebtn:active {
+  transform: scale(0.95);}
+.previuospagebtn{
+  background: transparent;
+  border: none;
+  color: white;
+  font-size: 20px;
+  cursor: pointer;}
+.previuospagebtn:active {
+  transform: scale(0.95);}
+.Organizationl1l2{
+  display: flex;
+  flex-direction: row;
+  gap: 30px;
+  justify-content: center;}
+.Organizationl3l4{
+  display: flex;
+  flex-direction: row;
+  gap: 30px;
+  justify-content: center;
+}
+.OrganizationBtn1Page2{
+  padding-top: 30px;
+  display: flex;
+  gap: 20%;
+  justify-content: center;
+  flex-wrap: wrap;
+}
+.OrganizationReef{
+  display: flex;
+  flex-direction: column;
+  gap: 30px;
+  padding-top: 12px;
+  padding-bottom: 40px;
+  justify-content: center;
+  flex-wrap: wrap;
+  flex-direction: row;
+}
+.OrganizationAlga{
+  display: flex;
+  flex-direction: row;
+  gap: 30px;
+  justify-content: center;
+}
+.H2N1Page2{
+  color: #d8c799;
+  font-size: 30px;
+  font-family: 'Bebas Neue', sans-serif;
+  text-align: center;
+  padding-bottom: 10px;
+}
+.AreaBtnZonaInicial {
+  display: flex;
+  flex-direction: row;
+  gap: 15px;
+  justify-content: center;
+}
+.StyleBtnZonaInicial {
+  text-align: center;
+  width: 90px;
+  height: 90px;
+  background-color: #373131;
+  border: solid #d8c799;
+  border-radius: 10%;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  opacity: 0.2;}
+.StyleBtnZonaInicial.selected {
+  transform: scale(1.05);
+  opacity: 1;
+  box-shadow: 0 0 15px rgba(0, 0, 0, 0.5);}
+.StyleBtnZonaInicial img {
+  width: 95%;
+  height: 95%;
+  object-fit: cover;}
+.StyleBtnZonaInicial.deselected {
+  opacity: 0.2;}
+.H2N2Page2{
+  color: #a6a6a6;
+  font-size: 30px;
+  font-family: 'Bebas Neue', sans-serif;
+  text-align: center;
+  padding-bottom: 10px;
+}
+.AreaBtnCoralStation {
+  display: flex;
+  flex-direction: row;
+  gap: 15px;
+  justify-content: center;
+}
+.StyleBtnCoralStation {
+  text-align: center;
+  width: 90px;
+  height: 90px;
+  background-color: #373131;
+  border: solid #a6a6a6;
+  border-radius: 10%;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  opacity: 0.2;}
+.StyleBtnCoralStation.selected {
+  transform: scale(1.05);
+  opacity: 1;
+  box-shadow: 0 0 15px rgba(0, 0, 0, 0.5);}
+.StyleBtnCoralStation img {
+  width: 95%;
+  height: 95%;
+  object-fit: cover;}
+.StyleBtnCoralStation.deselected {
+  opacity: 0.15;}
+.AreaPaiBtn{
+  display: flex;
+  position: static;
+  flex-direction: row;  /* Alinha verticalmente */
+  align-items: center; /* Centraliza horizontalmente */
+  justify-content: center;
+  gap: 20px; /* Espaço entre os elementos */}
+.Areaborda1btnpage2{
+  border: 3px solid #d8c799;
+  border-radius: 15px;
+  padding: 5%;
+  text-align: center;
+  color: white;}
+.Areaborda2btnpage2{
+  border: 3px solid #a6a6a6;
+  border-radius: 15px;
+  padding: 5%;
+  text-align: center;
+  color: white;}
+.Areaeespaçobtn{
+  display: flex;
+  flex-direction: row;  /* Alinha verticalmente */
+  align-items: center; /* Centraliza horizontalmente */
+  justify-content: center;}
+.espaçobtn{
+  border-radius: 100px;
+  height: 3px;
+  text-align: center;
+  color: white;}
+.OrganizationDisplay{
+  display: flex;
+  align-items: center; /* Centraliza horizontalmente */
+  justify-content: center;}
+.AreaDisplay {
+  border: 3px solid #d8c799;
+  background-color: #6a5c6a;
+  margin: 10px 0;
+  padding: 12px;
+  font-size: 24px;
+  border-radius: 4px;
+  width: 110px;}
+.AreaDisplayCinza {
+  border: 3px solid #a6a6a6;
+  background-color: #6a5c6a;
+  margin: 10px 0;
+  padding: 12px;
+  font-size: 24px;
+  border-radius: 4px;
+  width: 110px;}
+.Areabtnstyle{
+  display: flex;
+  flex-direction: row;  /* Alinha verticalmente */
+  align-items: center; /* Centraliza horizontalmente */
+  justify-content: center;
+  gap: 10px; /* Espaço entre os elementos */}
+.btnestilizados{
+  background: linear-gradient(45deg, #f3a847, #f7c13e);
+  border: none;
+  color: #6a5c6a;
+  font-size: 100%;
+  padding: 7% 21%;
+  cursor: pointer;
+  border-radius: 8%;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  transition: all 0.3s ease;}
+.btnestilizados:hover {
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.2);}
+.btnestilizados:active {
+  background: transparent;
+  color: #ffb800;
+  border: 1px solid #ffb800;}
+  .AreaBtnTiraAlga {
+    display: flex;
+    flex-direction: row;
+    gap: 15px;
+    justify-content: center;
+  }
+  .StyleBtnTiraAlga {
+    text-align: center;
+    width: 90px;
+    height: 90px;
+    background-color: #373131;
+    border: solid #d8c799;
+    border-radius: 10%;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    opacity: 0.2;}
+  .StyleBtnTiraAlga.selected {
+    transform: scale(1.05);
+    opacity: 1;
+    box-shadow: 0 0 15px rgba(0, 0, 0, 0.5);}
+  .StyleBtnTiraAlga img {
+    width: 95%;
+    height: 95%;
+    object-fit: cover;}
+  .StyleBtnTiraAlga.deselected {
+    opacity: 0.15;}
+  .AreaFinalPosition{
+    text-align: center;
+    padding-top: 100px;}
+  .AreaBtnFinalPosition{
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    gap: 15px;
+    justify-content: center;
+    padding-top: 40px;}
+.StyleBtnFinalPosition{
+    text-align: center;
+    justify-content: center;
+    width: 210px;
+    height: 140px;
+    cursor: pointer;
+  transition: all 0.3s ease;}
+.StyleBtnFinalPosition img{
+  width: 100%;
+  height: 100%;
+  object-fit: cover;}
+.StyleBtnFinalPosition.selected{
+  transform: scale(1.1);
+  box-shadow: 0 0 15px rgba(0, 0, 0, 0.5);}
+.StyleBtnFinalPosition.deselected{
+  opacity: 0.2 }
+.OrganizationBtn1Page4{
+  padding-top: 40px;
+  display: flex;
+  flex-direction: row;
+  gap: 20%;
+  justify-content: center;
+  flex-wrap: wrap;
+}
+.OrganizationBtn2Page4{
+  padding-top: 10px;
+  display: flex;
+  flex-direction: row;
+  gap: 20%;
+  justify-content: center;
+  flex-wrap: wrap;
+}
+.AreaBtnCoopertition {
+  display: flex;
+  flex-direction: row;
+  gap: 15px;
+  justify-content: center;
+}
+.StyleBtnCoopertition {
+  text-align: center;
+  width: 90px;
+  height: 90px;
+  background-color: #373131;
+  border: solid #d8c799;
+  border-radius: 10%;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  opacity: 0.2;}
+.StyleBtnCoopertition.selected {
+  transform: scale(1.05);
+  opacity: 1;
+  box-shadow: 0 0 15px rgba(0, 0, 0, 0.5);}
+.StyleBtnCoopertition img {
+  width: 95%;
+  height: 95%;
+  object-fit: cover;}
+.StyleBtnCoopertition.deselected {
+  opacity: 0.2;}
+  .AreaBtnRoboParou {
+    display: flex;
+    flex-direction: row;
+    gap: 15px;
+    justify-content: center;
+  }
+  .StyleBtnRoboParou {
+    text-align: center;
+    width: 90px;
+    height: 90px;
+    background-color: #373131;
+    border: solid #a6a6a6;
+    border-radius: 10%;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    opacity: 0.2;}
+  .StyleBtnRoboParou.selected {
+    transform: scale(1.05);
+    opacity: 1;
+    box-shadow: 0 0 15px rgba(0, 0, 0, 0.5);}
+  .StyleBtnRoboParou img {
+    width: 95%;
+    height: 95%;
+    object-fit: cover;}
+  .StyleBtnRoboParou.deselected {
+    opacity: 0.15;}
+
+    .AreaBtnDefesa {
+      display: flex;
+      flex-direction: row;
+      gap: 15px;
+      justify-content: center;
+    }
+    .StyleBtnDefesa {
+      text-align: center;
+      width: 90px;
+      height: 90px;
+      background-color: #373131;
+      border: solid #a6a6a6;
+      border-radius: 10%;
+      cursor: pointer;
+      transition: all 0.3s ease;
+      opacity: 0.2;}
+    .StyleBtnDefesa.selected {
+      transform: scale(1.05);
+      opacity: 1;
+      box-shadow: 0 0 15px rgba(0, 0, 0, 0.5);}
+    .StyleBtnDefesa img {
+      width: 95%;
+      height: 95%;
+      object-fit: cover;}
+    .StyleBtnDefesa.deselected {
+      opacity: 0.15;}
+.OrganizationaH2RP{
+  padding-top: 40px;
+}
+.OrganizationBtn1Page5{
+  padding-top: 10px;
+  display: flex;
+  flex-direction: row;
+  gap: 3%;
+  justify-content: center;
+  flex-wrap: wrap;
+}
+.AreaBtnAutoRP {
+  display: flex;
+  flex-direction: row;
+  gap: 15px;
+  padding: 10px;
+  justify-content: center;
+}
+.StyleBtnAutoRP {
+  text-align: center;
+  width: 100px;
+  height: 100px;
+  background-color: #373131;
+  border: solid #d8c799;
+  border-radius: 10%;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  opacity: 0.2;}
+.StyleBtnAutoRP.selected {
+  transform: scale(1.05);
+  opacity: 1;
+  box-shadow: 0 0 15px rgba(0, 0, 0, 0.5);}
+.StyleBtnAutoRP img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;}
+.StyleBtnAutoRP.deselected {
+  opacity: 0.2;}
+.AreaBtnCoralRP {
+  display: flex;
+  flex-direction: row;
+  gap: 15px;
+  padding: 10px;
+  justify-content: center;
+}
+.StyleBtnCoralRP {
+  text-align: center;
+  width: 100px;
+  height: 100px;
+  background-color: #373131;
+  border: solid #d8c799;
+  border-radius: 10%;
+  cursor: pointer;
+   transition: all 0.3s ease;
+  opacity: 0.2;}
+.StyleBtnCoralRP.selected {
+  transform: scale(1.05);
+  opacity: 1;
+  box-shadow: 0 0 15px rgba(0, 0, 0, 0.5);}
+.StyleBtnCoralRP img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;}
+.StyleBtnCoralRP.deselected {
+  opacity: 0.2;}
+.AreaBtnBargeRP {
+  display: flex;
+  flex-direction: row;
+  gap: 15px;
+  padding: 10px;
+  justify-content: center;
+}
+.StyleBtnBargeRP {
+  text-align: center;
+  width: 100px;
+  height: 100px;
+  background-color: #373131;
+  border: solid #d8c799;
+  border-radius: 10%;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  opacity: 0.2;}
+.StyleBtnBargeRP.selected {
+  transform: scale(1.05);
+  opacity: 1;
+  box-shadow: 0 0 15px rgba(0, 0, 0, 0.5);}
+.StyleBtnBargeRP img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;}
+.StyleBtnBargeRP.deselected {
+  opacity: 0.2;}
+.TxtAreaPage5{
+  background: transparent;
+  color: white;
+  width: 400px;
+  padding: 1%;
+  border: 3px solid #a6a6a6; 
+  font-size: 16px;}
+.AreaFalhasEObservações{
+  padding-top: 40px;
+}
+.AreaFaltas{
+  padding-top: 40px;
+}
+.AreaBtnFalhasEObservações {
+  display: flex;
+  flex-direction: row;
+  gap: 15px;
+  justify-content: center;
+}
+.AreaBtnFaltas {
+  display: flex;
+  flex-direction: row;
+  gap: 15px;
+  justify-content: center;
+}
+.OrganizationBtn2Page5{
+  padding-top: 140px;
+  display: flex;
+  flex-direction: row;
+  gap: 0%;
+  justify-content: center;
+  flex-wrap: wrap;
+}
+.OrganizationBtn1Page6{
+  padding-top: 10px;
+  display: flex;
+  gap: 25%;
+  text-align: center;
+  justify-content: center;
+  flex-wrap: wrap;
+}
+.OrganizationBtn2Page6{
+  justify-content: center;
+}
+.AreaBtnDownload {
+  display: flex;
+  flex-direction: row;
+  gap: 15px;
+  justify-content: center;
+}
+.BtnDownload {
+  text-align: center;
+  width: 70px;
+  height: 70px;
+  background-color: #373131;
+  border: solid #a6a6a6;
+  border-radius: 10%;
+  cursor: pointer;
+  transition: all 0.3s ease;}
+.BtnDownload img {
+  width: 95%;
+  height: 95%;
+  object-fit: cover;}
+.BtnDownload:hover{
+  background-color: #4D4545;
+}
+.BtnDownload:active{
+  transform: scale(1.1);
+}
+.AreaBtnDownloadReset {
+  display: flex;
+  flex-direction: row;
+  gap: 15px;
+  justify-content: center;
+}
+.BtnDownloadReset {
+  text-align: center;
+  width: 70px;
+  height: 70px;
+  background-color: #373131;
+  border: solid #d8c799;
+  border-radius: 10%;
+  cursor: pointer;
+  transition: all 0.3s ease;}
+.BtnDownloadReset img {
+  width: 95%;
+  height: 95%;
+  object-fit: cover;}
+.BtnDownloadReset:hover{
+  background-color: #4D4545;
+}
+.BtnDownloadReset:active{
+  transform: scale(1.1);
+}
+.AreaBtnString {
+  display: flex;
+  flex-direction: row;
+  gap: 15px;
+  justify-content: center;
+}
+#BtnString {
+  text-align: center;
+  width: 70px;
+  height: 70px;
+  background-color: #373131;
+  border: solid #d8c799;
+  border-radius: 10%;
+  cursor: pointer;
+  transition: all 0.3s ease;}
+#BtnString img {
+  width: 95%;
+  height: 95%;
+  object-fit: cover;}
+#BtnString:hover{
+  background-color: #4D4545;
+}
+#BtnString:active{
+  transform: scale(1.1);
+}
+.OrganizationQRCode{
+  padding-top: 20px;
+  justify-content: center;
+  text-align: center;
+}
+.OrganizationBtnQRCode{
+  padding-top: 20px;
+}
+.AreaPaiQRCode{
+  display: flex;
+  text-align: center;
+  justify-content: center; /* Centraliza horizontalmente */
+  border: 3px solid #d8c799;
+  border-radius: 10px;
+  width: 250px;
+  height: 250px;
+  color: white;
+}
+.AreaQRCode{
+  display: flex;
+  justify-content: center; /* Centraliza horizontalmente */
+  text-align: center;
+}
+#qrcode{
+  text-align: center;
+  justify-content: center;
+  padding: 20px;
+}
+.btnqrcode{
+  padding: 10px 10px; /* Espaçamento interno */
+  background-color: #373131; /* Cor de fundo para destacar o botão */
+  color: white; /* Cor do texto */
+  border: 1px solid #d8c799;
+  border-radius: 5px; /* Bordas arredondadas */
+  font-size: 15px; /* Tamanho do texto */
+  cursor: pointer; /* Mostra o cursor como "mãozinha" ao passar sobre */
+}
+.btnqrcode:hover {
+  background-color: #d8c799; /* Altera a cor ao passar o mouse */
+}
+.btnqrcode:active {
+  transform: scale(0.95);
+}
+.btnqrcode img{
+  width: 90px;
+  height: 90px;
+}
+.OrganizationBtnSheets{
+  display: flex;
+  flex-direction: row;
+  padding-top: 20px;
+  justify-content: center;
+  text-align: center;
+}
+.BtnSheets {
+  display: flex;
+  align-items: center;
+  background-color: #3a3232;
+  color: #f5e6a2;
+  font-weight: bold;
+  font-size: 14px;
+  border-radius: 30px;
+  padding: 10px 20px;
+  border: none;
+  cursor: pointer;
+  box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.3);
+  transition: 0.3s;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+}
+.BtnSheets:hover {
+  background-color: #524747;
+}
+.IconeBtnSheets {
+  background-color: #ffcc32;
+  width: 35px;
+  height: 35px;
+  border-radius: 50%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-right: 10px;
+}
+.IconeBtnSheets img {
+  width: 20px;
+  height: 20px;
+}
