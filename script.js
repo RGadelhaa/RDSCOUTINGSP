@@ -50,7 +50,7 @@ function nextPage(pageId) {
   let nextPage = document.getElementById('page' + currentPage);
   nextPage.classList.add('active');
   
-  disableButtons(pageId);  // Desabilita os botões enquanto a página troca
+  disableButtons(pageId); 
 }
 
 function previousPage(pageId) {
@@ -61,10 +61,9 @@ function previousPage(pageId) {
   let prevPage = document.getElementById('page' + currentPage);
   prevPage.classList.add('active');
   
-  disableButtons(pageId);  // Desabilita os botões enquanto a página troca
+  disableButtons(pageId); 
 }
 
-// Função para desabilitar botões durante a navegação
 function disableButtons(pageId) {
   document.getElementById('prevBtn' + currentPage).disabled = true;
   document.getElementById('nextBtn' + currentPage).disabled = true;
@@ -95,7 +94,7 @@ function selectOptionColor(color) {
       blueButton.classList.add('selected');
       blueButton.classList.remove('deselected');
 
-      redButton.innerHTML = '⠀'; // Restaura o botão vermelho
+      redButton.innerHTML = '⠀'; 
       redButton.classList.remove('selected');
       redButton.classList.add('deselected');
       redButton.style.backgroundColor = 'red';
@@ -172,11 +171,11 @@ function selectOptionPosition(position) {
     } else {
       // Select the button
       buttons.forEach(btn => {
-        btn.classList.remove('selected'); // Deselect all buttons
+        btn.classList.remove('selected'); 
         btn.classList.add('deselected');
       });
   
-      selectedButton.classList.add('selected'); // Select the clicked button
+      selectedButton.classList.add('selected'); 
       selectedButton.classList.remove('deselected');
       zonainicial = 'True';
     }
@@ -271,11 +270,11 @@ function selectOptionPosition(position) {
         coopertition = 'False'; // Reset the zone
       } else {
         buttons.forEach(btn => {
-          btn.classList.remove('selected'); // Deselect all buttons
+          btn.classList.remove('selected'); 
           btn.classList.add('deselected');
         });
     
-        selectedButton.classList.add('selected'); // Select the clicked button
+        selectedButton.classList.add('selected'); 
         selectedButton.classList.remove('deselected');
         coopertition = 'True';
       }
@@ -656,7 +655,7 @@ function updateDisplayFaltas() {
 ///////////////////////////////////////////////////////////////////////////////////////////
 const scriptURL = 'https://script.google.com/macros/s/AKfycbw0uGxFM8JqhyyVN5IFpm8MhtF9LM2qMTGe4UC0uwQudrMJH0FNltnewzqBhM0tNQk/exec';
 const form = document.forms['contact-form'];
-const submitButton = document.querySelector('button[type="submit"]'); // Seleciona o botão de envio
+const submitButton = document.querySelector('button[type="submit"]');
 
 function preencherFormulario() {
   const Scouter = document.getElementById("txtScouter").value;
@@ -806,7 +805,7 @@ function resetForm() {
   updateDisplayNetacertadoTeleop();
   updateDisplayFaltas();
 
-  // Resetando todos os campos de input
+
   document.querySelectorAll("input[type='text'], input[type='number']").forEach(input => {
       input.value = "";
   });
@@ -814,15 +813,15 @@ function resetForm() {
     button.classList.remove('selected', 'deselected');
 });
 
-  // Resetando os botões da aliança (removendo seleção e restaurando o HTML)
+
   const redButton = document.getElementById('btnRed');
   const blueButton = document.getElementById('btnBlue');
 
   redButton.classList.remove('selected', 'deselected');
   blueButton.classList.remove('selected', 'deselected');
 
-  redButton.innerHTML = '⠀'; // Volta ao estado original sem imagem
-  blueButton.innerHTML = '⠀'; // Volta ao estado original sem imagem
+  redButton.innerHTML = '⠀'; 
+  blueButton.innerHTML = '⠀'; 
 
   redButton.style.backgroundColor = 'red';
   blueButton.style.backgroundColor = 'blue';
@@ -1017,7 +1016,6 @@ function salvarCSV() {
 }
 let deferredPrompt;
 
-// Verifica se o app pode ser instalado
 if (window.matchMedia("(display-mode: standalone)").matches) {
   console.log("O app já está instalado!");
 } else {
@@ -1026,7 +1024,7 @@ if (window.matchMedia("(display-mode: standalone)").matches) {
     deferredPrompt = event;
 
     const installButton = document.getElementById("install-button");
-    installButton.style.display = "block"; // Exibe o botão
+    installButton.style.display = "block"; 
 
     installButton.addEventListener("click", () => {
       deferredPrompt.prompt();
@@ -1041,7 +1039,6 @@ if (window.matchMedia("(display-mode: standalone)").matches) {
     });
   });
 
-  //Tenta detectar a instalação mesmo sem o evento `beforeinstallprompt`
   setTimeout(() => {
     if (deferredPrompt === undefined) {
       document.getElementById("install-button").style.display = "block";
