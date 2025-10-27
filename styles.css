@@ -321,10 +321,10 @@ input[type="number"]::-webkit-inner-spin-button, input[type="number"]::-webkit-o
 .AreaPaiBtn{
   display: flex;
   position: static;
-  flex-direction: row;  /* Alinha verticalmente */
-  align-items: center; /* Centraliza horizontalmente */
+  flex-direction: row;
+  align-items: center;
   justify-content: center;
-  gap: 20px; /* Espaço entre os elementos */}
+  gap: 20px;}
 .Areaborda1btnpage2{
   border: 3px solid #d8c799;
   border-radius: 15px;
@@ -339,8 +339,8 @@ input[type="number"]::-webkit-inner-spin-button, input[type="number"]::-webkit-o
   color: white;}
 .Areaeespaçobtn{
   display: flex;
-  flex-direction: row;  /* Alinha verticalmente */
-  align-items: center; /* Centraliza horizontalmente */
+  flex-direction: row; 
+  align-items: center; 
   justify-content: center;}
 .espaçobtn{
   border-radius: 100px;
@@ -349,7 +349,7 @@ input[type="number"]::-webkit-inner-spin-button, input[type="number"]::-webkit-o
   color: white;}
 .OrganizationDisplay{
   display: flex;
-  align-items: center; /* Centraliza horizontalmente */
+  align-items: center;
   justify-content: center;}
 .AreaDisplay {
   border: 3px solid #d8c799;
@@ -369,10 +369,10 @@ input[type="number"]::-webkit-inner-spin-button, input[type="number"]::-webkit-o
   width: 110px;}
 .Areabtnstyle{
   display: flex;
-  flex-direction: row;  /* Alinha verticalmente */
-  align-items: center; /* Centraliza horizontalmente */
+  flex-direction: row;  
+  align-items: center; 
   justify-content: center;
-  gap: 10px; /* Espaço entre os elementos */}
+  gap: 10px;}
 .btnestilizados{
   background: linear-gradient(45deg, #f3a847, #f7c13e);
   border: none;
@@ -758,7 +758,7 @@ input[type="number"]::-webkit-inner-spin-button, input[type="number"]::-webkit-o
 .AreaPaiQRCode{
   display: flex;
   text-align: center;
-  justify-content: center; /* Centraliza horizontalmente */
+  justify-content: center; 
   border: 3px solid #d8c799;
   border-radius: 10px;
   width: 250px;
@@ -767,7 +767,7 @@ input[type="number"]::-webkit-inner-spin-button, input[type="number"]::-webkit-o
 }
 .AreaQRCode{
   display: flex;
-  justify-content: center; /* Centraliza horizontalmente */
+  justify-content: center;
   text-align: center;
 }
 #qrcode{
@@ -776,16 +776,16 @@ input[type="number"]::-webkit-inner-spin-button, input[type="number"]::-webkit-o
   padding: 20px;
 }
 .btnqrcode{
-  padding: 10px 10px; /* Espaçamento interno */
-  background-color: #373131; /* Cor de fundo para destacar o botão */
-  color: white; /* Cor do texto */
+  padding: 10px 10px; 
+  background-color: #373131; 
+  color: white;
   border: 1px solid #d8c799;
-  border-radius: 5px; /* Bordas arredondadas */
-  font-size: 15px; /* Tamanho do texto */
-  cursor: pointer; /* Mostra o cursor como "mãozinha" ao passar sobre */
+  border-radius: 5px; 
+  font-size: 15px; 
+  cursor: pointer; 
 }
 .btnqrcode:hover {
-  background-color: #d8c799; /* Altera a cor ao passar o mouse */
+  background-color: #d8c799; 
 }
 .btnqrcode:active {
   transform: scale(0.95);
