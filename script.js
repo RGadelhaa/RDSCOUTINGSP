@@ -68,7 +68,6 @@ function disableButtons(pageId) {
   document.getElementById('prevBtn' + currentPage).disabled = true;
   document.getElementById('nextBtn' + currentPage).disabled = true;
 
-  // Reabilita os botões após 500ms
   setTimeout(function() {
     document.getElementById('prevBtn' + currentPage).disabled = false;
     document.getElementById('nextBtn' + currentPage).disabled = false;
@@ -85,7 +84,7 @@ function selectOptionColor(color) {
       redButton.classList.add('selected');
       redButton.classList.remove('deselected');
 
-      blueButton.innerHTML = '⠀'; // Restaura o botão azul
+      blueButton.innerHTML = '⠀'; 
       blueButton.classList.remove('selected');
       blueButton.classList.add('deselected');
       blueButton.style.backgroundColor = 'blue';
@@ -160,16 +159,15 @@ function selectOptionPosition(position) {
   function selectZonaInicial(InitialZone) {
     const buttons = document.querySelectorAll('.StyleBtnZonaInicial'); 
     
-    // If the clicked button is already selected, toggle off
     const selectedButton = document.getElementById(`btn${InitialZone}`);
   
     if (selectedButton.classList.contains('selected')) {
-      // Deselect the button
+
       selectedButton.classList.remove('selected');
       selectedButton.classList.add('deselected');
-      zonainicial = 'False'; // Reset the zone
+      zonainicial = 'False';
     } else {
-      // Select the button
+  
       buttons.forEach(btn => {
         btn.classList.remove('selected'); 
         btn.classList.add('deselected');
@@ -267,7 +265,7 @@ function selectOptionPosition(position) {
       if (selectedButton.classList.contains('selected')) {
         selectedButton.classList.remove('selected');
         selectedButton.classList.add('deselected');
-        coopertition = 'False'; // Reset the zone
+        coopertition = 'False'; 
       } else {
         buttons.forEach(btn => {
           btn.classList.remove('selected'); 
